@@ -1,0 +1,63 @@
+body {
+	background-image: url("../img/back.png");
+}
+
+#wrap {
+	width: 250px;
+	margin: auto;
+}
+
+#search {
+	background-color: rgba(255, 251, 45, 0.3);
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 15px 15px 0px 15px;
+	border: 1px solid #696969;
+}
+
+#message {
+	background-color: #FFE680;
+	border-radius: 15px 15px 0px 15px;
+	text-align: center;
+	border: 1px solid #696969;
+}
+
+#result {
+	padding: 10px;
+	background-color:  rgba(255, 251, 45, 0.4);
+	margin-bottom: 2px;
+	border-radius: 15px 0px 0px 0px;
+	border: 1px solid #696969;
+}
+
+#result img {
+	float: left;
+	max-height: 40px;
+}
+
+.fa-search {
+	font-size: 230px;
+	color:white;
+	margin-bottom: 30px;
+	transition: 0.4s ease-out; 
+}
+
+.fa-user-plus {
+	font-size:60px;
+	color:white;
+	margin: 0px 10px 10px 20px;
+	transition: 0.4s ease-out;
+}
+
+.fa-trash-alt {
+	font-size:60px;
+	color:white;
+	margin: 0px 0px 10px 27px;
+	transition: 0.4s ease-out;
+}
+
+
+.fa-search:hover, .fa-trash-alt:hover, .fa-user-plus:hover{
+	color: #84a7f4;
+}
+
