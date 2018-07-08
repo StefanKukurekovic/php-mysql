@@ -5,10 +5,10 @@ $userName = "root";
 $password = "";
 $dbName = "phonebook";
 
-// Uspostavi konekciju
+// establish connection
 $conn = mysqli_connect($serverName, $userName, $password, $dbName);
 
-// Provera konekcije
+// check connection
 if(!$conn) {
 	die("Connection failed: " . mysqli_connect_error());
 }
