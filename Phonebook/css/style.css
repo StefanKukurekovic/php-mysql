@@ -35,29 +35,33 @@ body {
 	max-height: 40px;
 }
 
-.fa-search {
-	font-size: 230px;
+.top_icon {
+	font-size: 180px;
+	height: 250px;
 	color:white;
 	margin-bottom: 30px;
+	padding: 0px;
 	transition: 0.4s ease-out; 
 }
 
-.fa-user-plus {
+.left_icon {
 	font-size:60px;
-	color:white;
-	margin: 0px 10px 10px 20px;
+	float: left;
+	width: 114px;
+	color: white;
 	transition: 0.4s ease-out;
 }
 
-.fa-trash-alt {
+.right_icon {
 	font-size:60px;
-	color:white;
-	margin: 0px 0px 10px 27px;
+	float: left;
+	width: 114px;
+	color: white;
 	transition: 0.4s ease-out;
 }
 
 
-.fa-search:hover, .fa-trash-alt:hover, .fa-user-plus:hover{
+.left_icon:hover, .right_icon:hover, .top_icon:hover{
 	color: #84a7f4;
 }
 
