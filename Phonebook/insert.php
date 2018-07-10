@@ -16,7 +16,9 @@
 			<div  class="left_icon">
 				<a href="index.php"><i class="fas fa-search" title="Search for contacts"></i></a>
 			</div>
-			<div class="right_icon">
+			<!-- yet to be tested !-->
+			<!-- <div class="right_icon"> !-->
+			<div>
 				<a href="remove.php"><i class="fas fa-trash-alt"></i></a>
 			</div>
 
