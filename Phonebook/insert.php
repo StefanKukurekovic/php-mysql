@@ -11,15 +11,14 @@
 	<div id="wrap">
 		<div id="search">
 			<div class="top_icon">
-				<i class="fas fa-user-plus" title="Add new contact"></i>
+				<img src="img/add.png" title="Add new contacts">
 			</div>
 			<div  class="left_icon">
-				<a href="index.php"><i class="fas fa-search" title="Search for contacts"></i></a>
+				<a href="index.php"><img src="img/search.png" title="Search for contacts"></a>
 			</div>
-			<!-- yet to be tested !-->
-			<!-- <div class="right_icon"> !-->
-			<div>
-				<a href="remove.php"><i class="fas fa-trash-alt"></i></a>
+			<div class="right_icon">
+				<img src="img/remove.png" title="Remove contact">
+				<a href="remove.php"></a>
 			</div>
 
 			<form action="#" method="POST"><!-- POST method now, just to see how it works here, instead of GET!--> 	  <label>First name:<br/>
