@@ -21,9 +21,9 @@
 				<a href="remove.php"></a>
 			</div>
 
-			<form action="#" method="POST"><!-- POST method now, just to see how it works here, instead of GET!--> 	  <label>First name:<br/>
-				<input type="text" name="fname"></label>
-
+			<form action="#" method="POST"><!-- POST method now, just to see how it works here, instead of GET!--> 	  <!-- <label>First name:<br/>-->
+				<input type="text" name="fname" size="18"> <!-- </label> !-->
+				<input type="submit" value="Search"><br/>
 								
 			</form>
 		</div>
