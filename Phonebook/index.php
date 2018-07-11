@@ -17,8 +17,7 @@
 				<a href="insert.php"><img src="img/add.png" title="Add new contact"></a>
 			</div>
 			<div class="right_icon">
-				<img src="img/remove.png" title="Remove contact">
-				<!-- <a href="remove.php"></a> !-->
+				<a href="remove.php"><img src="img/remove.png" title="Remove contact"></a>
 			</div>
 			<form action="#" method="GET">
 				<input type="text" name="criteria" placeholder="First or last name..." size="18"> 
