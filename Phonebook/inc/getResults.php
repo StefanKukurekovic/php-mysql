@@ -1,19 +1,22 @@
 <?php
-// Ukljuci konekciju iz connect.php fajla
+// connect to db
 require 'connect.php';
 
-// Da li je korisnik upisao neki kriterijum za pretragu
+// Check if user has entert some search criteria
 if(isset($_GET['criteria'])) {
-	if(!empty($_GET['criteria']))
-	{	// iseci razmake sa pocetka i kraja stringa
+	if(!empty($_GET['criteria'])){	
+		
+		// crop empty spaces from beining and the end of the string
 		$criteria = trim($_GET['criteria']);
-		// Osnovne zastitne mere
+
+		// Basic safety measures
 		$criteria = mysqli_real_escape_string($conn, $criteria);
 
-		// Query: selektuj sva polja iz tabele contact gde je ime "nesto sto lici na kriterijum" (moze biti i deo imena ili slovo)
+		// Query: select all fields from the table 'contacts' where neme is 'something that looks like criteria' (it can also be just a part of a name or just one letter)
 		$query = "SELECT * FROM contacts WHERE fname LIKE '%{$criteria}%' OR lname LIKE '%{$criteria}%'";
 		$result = mysqli_query($conn, $query);
-		// ako je broj redova koji je vracen u $result > 0 -> znaci da imamo neki rezultat i da ga treba obraditi
+
+		// if the number of rows is > 0 there is some value and it needs to be process
 		if(mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
 				?>
@@ -26,10 +29,13 @@ if(isset($_GET['criteria'])) {
 			}
 			echo "Number of results: " . mysqli_num_rows($result);
 		}else{
-			echo "No results.<br/>";
+			?>
+			<p style="color: white;"><b>No results!</b></p>
+			<?php
 		}
 
-	}else{ //ukoliko je korisnik samo kliknuo SUBMIT bez unosa
+	}else{ 
+		// If the user clicked SUBMIT with out any input
 		echo "Criteria is empty.<br/>";
 	}
 }

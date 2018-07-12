@@ -35,7 +35,7 @@
 						?>
 
 						<dir id="result"> 
-							<a href="inc/removeContact.php?id=<?php echo $row['id'] ?>"><i class="fas fa-user-times" style="font-size: 30px; float: right; color: black;"></i></a>
+							<a href="inc/removeContact.php?id=<?php echo $row['id'] ?>"><i class="fas fa-trash-alt" style="font-size: 30px; float: right; color: black;"></i></i></a>
 							<p style="font-size: 18px;"><b>Name: </b><?php echo $row['fname'] . " " . $row['lname']; ?></p>
 					<p style="font-size: 18px;"><b>Tel: </b><?php echo $row['tel']; ?></p>
 						</dir>
