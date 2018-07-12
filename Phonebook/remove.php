@@ -16,7 +16,7 @@
 			<div  class="left_icon">
 				<a href="index.php"><img src="img/search.png" title="Search for contacts"></a>
 			</div>
-			<div class="right_icon">
+			<div class="right_icon" style="margin-bottom: 100px;">
 				<a href="insert.php"><img src="img/add.png" title="Add new contact"></a>
 			</div>
 			<?php
@@ -35,7 +35,9 @@
 						?>
 
 						<dir id="result"> 
-							<a href=""><i class="fas fa-user-times" style="font-size: 30px; float: right;"></i></a>
+							<a href="inc/removeContact.php?id=<?php echo $row['id'] ?>"><i class="fas fa-user-times" style="font-size: 30px; float: right; color: black;"></i></a>
+							<p style="font-size: 18px;"><b>Name: </b><?php echo $row['fname'] . " " . $row['lname']; ?></p>
+					<p style="font-size: 18px;"><b>Tel: </b><?php echo $row['tel']; ?></p>
 						</dir>
 
 						<?php
