@@ -20,7 +20,8 @@
 				<a href="remove.php"><img src="img/remove.png" title="Remove contact"></a>
 			</div>
 			<form action="#" method="GET">
-				<input type="text" name="criteria" placeholder="First or last name..." size="18"> 
+				<label><b>Search a name...</b><br/>
+				<input type="text" name="criteria" placeholder="First or last name..." size="18"></label>
 				<input type="submit" value="Search"><br/>				
 			</form>
 		</div>

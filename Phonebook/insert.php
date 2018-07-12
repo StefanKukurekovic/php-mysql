@@ -20,11 +20,59 @@
 				<a href="remove.php"><img src="img/remove.png" title="Remove contact"></a>
 			</div>
 
-			<form action="#" method="POST"><!-- POST method now, just to see how it works here, instead of GET!--> 	  <!-- <label>First name:<br/>-->
-				<input type="text" name="fname" placeholder="First or last name..." size="18"> <!-- </label> !-->
-				<input type="submit" value="Search"><br/>
-								
+			<form action="#" method="POST"><!-- POST method now, just to see how it works here, instead of GET!--> 	  <label><b>First name:</b><br/>
+				<input type="text" name="fname" placeholder="First name..." size="18" style="margin-bottom: 5px;">
+				</label><br/>
+				<label><b>Last name:</b><br/>
+				<input type="text" name="lname" placeholder="Last name..." size="18" style="margin-bottom: 5px;">
+				</label><br/>
+				<label><b>Tel:</b><br/>
+				<input type="text" name="tel" placeholder="Telephone..." size="18">
+				</label>
+				<input type="submit" name="insert" value="Insert">								
 			</form>
+		</div>
+		<div id="message">
+			<?php
+				// [1] Check if parameters are set (if the butten "Insert" is clicked)
+				if(isset($_POST['insert'])){
+					// [2] Check if ALL parameters we need are sent
+					if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['tel'])){
+						// [3] Check if sent parameters are not empty
+						if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['tel'])) {
+
+							// Remove empty spaces from beginning and the end of variables
+							$fname = trim($_POST['fname']);
+							$lname = trim($_POST['lname']);
+							$tel = trim($_POST['tel']);
+
+							// Connect to db
+							require 'inc/connect.php';
+
+							// Basic safety measures
+							$fname = mysqli_real_escape_string($conn, $fname);
+							$lname = mysqli_real_escape_string($conn, $lname);
+							$tel = mysqli_real_escape_string($conn, $tel);
+
+							// writing into db
+							$query = "INSERT INTO  contacts (fname, lname, tel) VALUES ('{$fname}', '{$lname}', '{$tel}')";
+
+							// If query was executed successfully without error send this message
+							if(mysqli_query($conn, $query) === TRUE){
+								echo "New record successfully created.";
+							}else{
+								echo "Error!";
+							}
+						}else{
+							// [3] If some fields are not filled
+							echo "All fields must be filled in.";
+						}
+					}else{
+						// [2] If some of the parameters are not sent
+						echo "All parameters must be sent!";
+					}
+				}
+			?>
 		</div>
 
 	</div>

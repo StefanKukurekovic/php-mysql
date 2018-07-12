@@ -47,10 +47,19 @@ body {
 	width: 80px;
 	margin-left: 15px;
 	transition: 0.4s ease-out;
+	margin-bottom: 30px;
+}
+
+.right_icon img{
+	margin-right: 50px;
 }
 
 
 .left_icon:hover, .right_icon:hover, .top_icon:hover{
 	color: #84a7f4;
+}
+
+form {
+	margin: 0px 0px 30px 10px;
 }
 
