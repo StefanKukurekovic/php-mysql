@@ -19,11 +19,41 @@
 			<div class="right_icon">
 				<a href="insert.php"><img src="img/add.png" title="Add new contact"></a>
 			</div>
+			<?php
+				// Connect to db
+				require 'inc/connect.php';
+
+				// All data from db
+				$query = "SELECT * FROM contacts";
+
+				// Save here the number of all queries from db
+				$result = mysqli_query($conn, $query);
+
+				// If db is not empty
+				if(mysqli_num_rows($result) > 0){
+					while($row = mysqli_fetch_assoc($result)){
+						?>
+
+						<dir id="result"> 
+							<a href=""><i class="fas fa-user-times" style="font-size: 30px; float: right;"></i></a>
+						</dir>
+
+						<?php
+					}
+				}else{
+					echo "No contacts.";
+				}
+			?>
+
+
+
+			<!--
 			<form action="#" method="GET">
 				<label><b>First name:</b><br/>
 				<input type="text" name="criteria" placeholder="First or last name..." size="18"></label>
 				<input type="submit" value="Search"><br/>				
 			</form>
+			!-->
 		</div>
 
 	</div>
