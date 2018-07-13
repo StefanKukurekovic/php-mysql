@@ -28,8 +28,13 @@ body {
 	margin: 0;
 }
 
-#result {
-	border-bottom: solid 1px black;
+#wrap-style {
+	width: 60%;
+	margin: auto;
+}
+
+table {
+	border: solid 1px black;
 }
 
 p {

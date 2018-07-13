@@ -27,6 +27,7 @@
 	</div>
 
 	<div id="wrap">
+		<div id="wrap-style">
 		<?php
 			// Connect to db
 			require 'inc/conn.php';
@@ -42,11 +43,25 @@
 					while($row = mysqli_fetch_assoc($result)){
 						?>
 
-					<dir id="result"> 
+					<table>
+						<tr>
+							<th>ID</th>
+							<th>First name</th>
+							<th>Second name</th>
+							<th>Agency</th>
+						</tr>
+						<tr>
+							<td><?php echo $row['id'] ?></td>
+							<td><?php echo $row['fname'] ?></td>
+							<td><?php echo $row['lname'] ?></td>
+							<td><?php echo $row['organisation'] ?></td>
+						</tr>
+					</table>
+					<!--
 						<i class="fas fa-user-secret" style="font-size: 30px; float: right; color: black;"></i>
 						<p style="font-size: 18px;"><?php echo $row['id'] ?><b>  Name: </b><?php echo $row['fname'] . " " . $row['lname']; ?></p>
 						<p style="font-size: 18px;"><b>Agency: </b><?php echo $row['organisation']; ?></p>
-					</dir>
+						!-->
 
 						<?php
 
@@ -62,6 +77,7 @@
 					echo "No contacts.";
 				}
 		?>
+	</div>
 	</div>
 
 </body>
