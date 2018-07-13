@@ -6,17 +6,23 @@
 </head>
 <body>
 	<div id="side">
-		<div class="select">
-			<p>SELECT</p>
-		</div>
+		<a href="select.php">
+			<div class="select">
+				<p>SELECT</p>
+			</div>
+		</a>
 
-		<div class="insert">
-			<p>INSERT</p>
-		</div>
+		<a href="insert.php">
+			<div class="insert">
+				<p>INSERT</p>
+			</div>
+		</a>
 
-		<div class="delete">
-			<p>DELETE</p>
-		</div>
+		<a href="delete.php">
+			<div class="delete">
+				<p>DELETE</p>
+			</div>
+		</a>
 	</div>
 
 	<div id="wrap">
