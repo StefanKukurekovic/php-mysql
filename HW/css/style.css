@@ -1,0 +1,24 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#side {
+	width: 20%;
+	height:100vh;
+	float: left;
+	background-image: url("../img/side_back.png");
+	margin: 0;
+}
+
+#wrap {
+	width: 80%;
+	height:100vh;
+	float: right;
+	background-color: white;
+	margin: 0;
+}
+
+.select, .insert, .delete {
+	
+}
