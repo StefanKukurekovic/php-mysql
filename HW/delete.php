@@ -28,8 +28,8 @@
 
 	<div id="wrap">
 		<?php
-			// Connect to db
-			require 'inc/conn.php';
+				// Connect to db
+				require 'inc/conn.php';
 
 				// All data from db
 				$query = "SELECT * FROM agents";
@@ -42,26 +42,18 @@
 					while($row = mysqli_fetch_assoc($result)){
 						?>
 
-					<dir id="result"> 
-						<i class="fas fa-user-secret" style="font-size: 30px; float: right; color: black;"></i>
-						<p style="font-size: 18px;"><?php echo $row['id'] ?><b>  Name: </b><?php echo $row['fname'] . " " . $row['lname']; ?></p>
-						<p style="font-size: 18px;"><b>Agency: </b><?php echo $row['organisation']; ?></p>
-					</dir>
+						<dir id="result"> 
+							<a href="inc/deleteContact.php?id=<?php echo $row['id'] ?>"><i class="fas fa-trash-alt" style="font-size: 30px; float: right; color: black;"></i></i></a>
+							<p style="font-size: 18px;"><b>Name: </b><?php echo $row['fname'] . " " . $row['lname']; ?></p>
+					<p style="font-size: 18px;"><b>Agency: </b><?php echo $row['organisation']; ?></p>
+						</dir>
 
 						<?php
-
-
-						/*
-						echo $row['id'] . "<br>";
-						echo "First name: " . $row['fname'] . "<br>";
-						echo "Last name: " . $row['lname'] . "<br>";
-						echo "Agency: " . $row['organisation']. "<br>";
-						echo "--------------------------<br/>";*/
 					}
 				}else{
 					echo "No contacts.";
 				}
-		?>
+			?>
 	</div>
 
 </body>

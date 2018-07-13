@@ -6,6 +6,7 @@ body {
 #side {
 	width: 20%;
 	height:100vh;
+	position: fixed;
 	float: left;
 	background-image: url("../img/side_back.png");
 	margin: 0;
@@ -13,10 +14,27 @@ body {
 
 #wrap {
 	width: 80%;
+	height:100%;
+	float: right;
+	background-color: white;
+	margin: 0;
+}
+
+#wrap-insert {
+	width: 80%;
 	height:100vh;
 	float: right;
 	background-color: white;
 	margin: 0;
+}
+
+#result {
+	border-bottom: solid 1px black;
+}
+
+p {
+	margin: 0;
+	padding: 0;
 }
 
 a {
