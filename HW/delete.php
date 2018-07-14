@@ -27,6 +27,7 @@
 	</div>
 
 	<div id="wrap">
+		<div id="wrap-style">
 		<?php
 				// Connect to db
 				require 'inc/conn.php';
@@ -37,24 +38,47 @@
 				// Save here the number of all queries from db
 				$result = mysqli_query($conn, $query);
 
+				// Table headers
+				?>
+						<table>
+							<tr>
+								<th class="td_first">ID</th>
+								<th class="td_other">First name</th>
+								<th class="td_other">Last name</th>
+								<th class="td_other">Agency</th>
+								<th class="td_last">Status</th>
+							</tr>
+						</table>
+				<?php
+
 				// If db is not empty
 				if(mysqli_num_rows($result) > 0){
+
+					// Counter is here for table style
+					$i = 0;
 					while($row = mysqli_fetch_assoc($result)){
 						?>
 
-						<dir id="result"> 
-							<a href="inc/deleteContact.php?id=<?php echo $row['id'] ?>"><i class="fas fa-trash-alt" style="font-size: 30px; float: right; color: black;"></i></i></a>
-							<p style="font-size: 18px;"><b>Name: </b><?php echo $row['fname'] . " " . $row['lname']; ?></p>
-					<p style="font-size: 18px;"><b>Agency: </b><?php echo $row['organisation']; ?></p>
-						</dir>
-
+						<table>
+							<tr>
+								<?php echo ($i % 2)?'<tr class="odd">':'<tr class="even">'; ?>
+								<td class="td_first"><?php echo $row['id'] ?>.</td>
+								<td class="td_other"><?php echo $row['fname'] ?></td>
+								<td class="td_other"><?php echo $row['lname'] ?></td>
+								<td class="td_other"><?php echo $row['organisation'] ?></td>
+								<td class="td_last">Agent <a href="inc/deleteContact.php?id=<?php echo $row['id'] ?>"><i class="fas fa-trash-alt" style="font-size: 25px; float: right; color: black;"></i></a></td>
+							</tr>
+							</form>
+						</table>
 						<?php
+						$i++;
 					}
 				}else{
 					echo "No contacts.";
 				}
 			?>
-	</div>
+</div>
+</div>
 
 </body>
 </html>

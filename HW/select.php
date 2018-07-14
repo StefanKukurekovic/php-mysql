@@ -38,40 +38,38 @@
 				// Save here the number of all queries from db
 				$result = mysqli_query($conn, $query);
 
+					// Table headers
+					?>
+						<table>
+							<tr>
+								<th class="td_first">ID</th>
+								<th class="td_other">First name</th>
+								<th class="td_other">Last name</th>
+								<th class="td_other">Agency</th>
+								<th class="td_last">Status</th>
+							</tr>
+						</table>
+					<?php
 				// If db is not empty
 				if(mysqli_num_rows($result) > 0){
+
+					// Couter is here for table style
+					$i = 0;
 					while($row = mysqli_fetch_assoc($result)){
-						?>
+					?>
+						<table>
+							<tr>
+								<?php echo ($i % 2)?'<tr class="odd">':'<tr class="even">'; ?>
+								<td class="td_first"><?php echo $row['id'] ?>.</td>
+								<td class="td_other"><?php echo $row['fname'] ?></td>
+								<td class="td_other"><?php echo $row['lname'] ?></td>
+								<td class="td_other"><?php echo $row['organisation'] ?></td>
+								<td class="td_last">Agent <i class="fas fa-user-secret" style="font-size: 25px; float: right; color: black;"></i></td>
+							</tr>
+						</table>
+					<?php
+					$i++;
 
-					<table>
-						<tr>
-							<th>ID</th>
-							<th>First name</th>
-							<th>Second name</th>
-							<th>Agency</th>
-						</tr>
-						<tr>
-							<td><?php echo $row['id'] ?></td>
-							<td><?php echo $row['fname'] ?></td>
-							<td><?php echo $row['lname'] ?></td>
-							<td><?php echo $row['organisation'] ?></td>
-						</tr>
-					</table>
-					<!--
-						<i class="fas fa-user-secret" style="font-size: 30px; float: right; color: black;"></i>
-						<p style="font-size: 18px;"><?php echo $row['id'] ?><b>  Name: </b><?php echo $row['fname'] . " " . $row['lname']; ?></p>
-						<p style="font-size: 18px;"><b>Agency: </b><?php echo $row['organisation']; ?></p>
-						!-->
-
-						<?php
-
-
-						/*
-						echo $row['id'] . "<br>";
-						echo "First name: " . $row['fname'] . "<br>";
-						echo "Last name: " . $row['lname'] . "<br>";
-						echo "Agency: " . $row['organisation']. "<br>";
-						echo "--------------------------<br/>";*/
 					}
 				}else{
 					echo "No contacts.";

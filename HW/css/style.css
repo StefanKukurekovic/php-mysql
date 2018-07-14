@@ -12,39 +12,6 @@ body {
 	margin: 0;
 }
 
-#wrap {
-	width: 80%;
-	height:100%;
-	float: right;
-	background-color: white;
-	margin: 0;
-}
-
-#wrap-insert {
-	width: 80%;
-	height:100vh;
-	float: right;
-	background-color: white;
-	margin: 0;
-}
-
-#wrap-style {
-	width: 60%;
-	margin: auto;
-}
-
-table {
-	border: solid 1px black;
-}
-
-p {
-	margin: 0;
-	padding: 0;
-}
-
-a {
-	text-decoration: none;
-}
 
 .select, .insert, .delete {
 	width: 80%;
@@ -63,3 +30,62 @@ a {
 .select:hover, .insert:hover, .delete:hover {
 	background-color: rgb(153, 153, 255, 0.4);
 }
+
+#wrap {
+	width: 80%;
+	height:100%;
+	float: right;
+	background-color: white;
+	margin: auto;
+}
+
+#wrap-insert {
+	width: 80%;
+	height:100vh;
+	float: right;
+	background-color: white;
+	margin: 0;
+}
+
+#wrap-style {
+	width: 60%;
+	margin: auto;
+	padding-top: 100px;
+}
+
+table {
+	margin: auto;
+	border-spacing: 0;
+}
+
+th {
+	text-align: left;
+}
+
+.td_first {
+	width: 50px;
+	text-align: center;
+}
+
+.td_other {
+	width: 150px;
+}
+
+.td_last {
+	width: 100px;
+}
+
+.even {
+	background-color: #8eb9ff;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
