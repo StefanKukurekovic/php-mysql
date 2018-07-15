@@ -31,6 +31,27 @@ body {
 	background-color: rgb(153, 153, 255, 0.4);
 }
 
+.fa-home:hover {
+	color: rgb(153, 153, 255, 0.4);
+}
+
+#home {
+	margin-top: 20px;
+	margin-left: 10px;
+	width: 50px;
+	text-align: center;
+}
+
+.fa-home {
+	color: white;
+	font-size: 40px;
+	transition-duration: 0.4s;
+}
+
+#index-arrows {
+	margin-top:23px;
+}
+
 #wrap {
 	width: 80%;
 	height:100%;
@@ -43,8 +64,12 @@ body {
 	width: 80%;
 	height:100vh;
 	float: right;
-	background-color: white;
-	margin: 0;
+	margin-top: 100px;
+}
+
+.form-insert {
+	width: 400px;
+	margin: auto;
 }
 
 #wrap-style {
@@ -86,6 +111,60 @@ p {
 
 a {
 	text-decoration: none;
+}
+
+#arrowAnim {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow {
+	margin-left: 350px;
+	margin-top: 150px;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  border: 5px solid;
+  border-color: black transparent transparent black;
+  transform: rotate(-45deg);
+}
+
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 4s linear infinite; 
+          animation: slide 4s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s; 
+    animation-delay: 1s;
+}
+.delay2 {
+  -webkit-animation-delay: 2s; 
+    animation-delay: 2s;
+}
+.delay3 {
+  -webkit-animation-delay: 3s; 
+    animation-delay: 3s;
+}
+
+@-webkit-keyframes slide {
+    0% { opacity:0; transform: translateX(15vw); }  
+   20% { opacity:1; transform: translateX(9vw); }   
+   80% { opacity:1; transform: translateX(-9vw); }  
+  100% { opacity:0; transform: translateX(-15vw); } 
+}
+@keyframes slide {
+    0% { opacity:0; transform: translateX(15vw); }  
+   20% { opacity:1; transform: translateX(9vw); }   
+   80% { opacity:1; transform: translateX(-9vw); }  
+  100% { opacity:0; transform: translateX(-15vw); } 
 }
 
 

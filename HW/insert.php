@@ -3,9 +3,19 @@
 <head>
 	<title>Form</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css?<?php echo time(); ?>">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
+	<!-- Sidebar !-->
 	<div id="side">
+
+		<!-- Home button !-->
+		<a href="index.php">
+			<div id="home">
+				<i class="fas fa-home"></i>
+			</div>
+		</a>
+
 		<a href="select.php">
 			<div class="select">
 				<p>SELECT</p>
@@ -23,21 +33,28 @@
 				<p>DELETE</p>
 			</div>
 		</a>
+
 	</div>
 
 	<div id="wrap-insert">
+		<h1 style="margin-left: 430px;">Insert new user</h1>
+		<div class="form-insert">
 		<form action="#" method="POST">	  
+		<fieldset>
+		<legend> Enter new agent's information </legend>	
 			<label><b>First name:</b><br/>
 				<input type="text" name="fname" placeholder="First name..." size="28" style="margin-bottom: 5px;">
 				</label><br/>
 				<label><b>Last name:</b><br/>
 				<input type="text" name="lname" placeholder="Last name..." size="28" style="margin-bottom: 5px;">
 				</label><br/>
-				<label><b>Tel:</b><br/>
+				<label><b>Agency...:</b><br/>
 				<input type="text" name="organisation" placeholder="Agency..." size="28">
 				</label>
-				<input type="submit" name="insert" value="Insert">								
+				<input type="submit" name="insert" value="Insert">			
+			</fieldset>					
 			</form>
+		
 
 			<?php
 				// [1] Check if parameters are set (if the button "Insert" is clicked)
@@ -79,6 +96,7 @@
 					}
 				}
 			?>
+			</div>
 	</div>
 
 </body>

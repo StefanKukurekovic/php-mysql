@@ -7,6 +7,13 @@
 </head>
 <body>
 	<div id="side">
+
+		<a href="index.php">
+			<div id="home">
+				<i class="fas fa-home"></i>
+			</div>
+		</a>
+
 		<a href="select.php">
 			<div class="select">
 				<p>SELECT</p>
@@ -28,6 +35,7 @@
 
 	<div id="wrap">
 		<div id="wrap-style">
+			<h1 style="margin-left: 150px;">All records from database</h1>
 		<?php
 			// Connect to db
 			require 'inc/conn.php';
