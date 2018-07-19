@@ -9,7 +9,7 @@
 	<!-- Sidebar !-->
 	<div id="side">
 
-		<!-- Home button !-->
+		<!-- side buttons !-->
 		<a href="index.php">
 			<div id="home">
 				<i class="fas fa-home"></i>

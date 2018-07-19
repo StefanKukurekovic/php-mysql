@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="side">
-
+		<!-- side buttons !-->
 		<a href="index.php">
 			<div id="home">
 				<i class="fas fa-home"></i>
